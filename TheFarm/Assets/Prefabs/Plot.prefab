@@ -99,11 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe5241e9d9dcbb47ae0812ac83b3e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantStages:
-  - {fileID: -2243732589849547616, guid: 5c561f7e07ea8be418296a429a2c9280, type: 3}
-  - {fileID: 4506980375917697221, guid: 5c561f7e07ea8be418296a429a2c9280, type: 3}
-  - {fileID: 6205673657870114336, guid: 5c561f7e07ea8be418296a429a2c9280, type: 3}
-  - {fileID: 6881750370916773083, guid: 5c561f7e07ea8be418296a429a2c9280, type: 3}
+  selectedPlant: {fileID: 11400000, guid: e520ec8bb56417640b8d6f1ed2788107, type: 2}
 --- !u!114 &1121328467846509902
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,10 +9,10 @@ public class Plot_Manager : MonoBehaviour
     SpriteRenderer plant;
     BoxCollider2D plantcollider;
 
-    public Sprite[] plantStages;
     int plantStage = 0;
-    float timeStages = 2f;
     float timer;
+
+    public PlantObject selectedPlant;
 
     void Start()
     {
@@ -27,9 +27,9 @@ public class Plot_Manager : MonoBehaviour
         {
             timer -= Time.deltaTime;
             
-            if(timer<0 && plantStage<plantStages.Length-1)
+            if(timer<0 && plantStage<selectedPlant.plantStages.Length-1)
             {
-                timer = timeStages;
+                timer = selectedPlant.timeStages;
                 plantStage++;
                 uptadePlant();
             }
@@ -41,7 +41,7 @@ public class Plot_Manager : MonoBehaviour
     {
         if(isPlanted)
         {
-            if(plantStage == plantStages.Length - 1)
+            if(plantStage == selectedPlant.plantStages.Length - 1)
             {
                 Harvest();
             }
@@ -65,13 +65,13 @@ public class Plot_Manager : MonoBehaviour
         isPlanted = true;
         plantStage = 0;
         uptadePlant();
-        timer = timeStages;
+        timer = selectedPlant.timeStages;
         plant.gameObject.SetActive(true);
     }
 
     void uptadePlant()
     {
-        plant.sprite = plantStages[plantStage];
+        plant.sprite = selectedPlant.plantStages[plantStage];
         plantcollider.size = plant.sprite.bounds.size;
         plantcollider.offset = new Vector2(0,plant.bounds.size.y/2);
     }
