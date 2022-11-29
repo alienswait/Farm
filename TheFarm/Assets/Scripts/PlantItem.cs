@@ -11,6 +11,8 @@ public class PlantItem : MonoBehaviour
     public Text NameTxt;
     public Text PriceText;
     public Image Icon;
+    public Image btnImage;
+    public Text btnText;
 
     FarmManager fm;
 
@@ -29,7 +31,7 @@ public class PlantItem : MonoBehaviour
     void InitializeUI()
     {
         NameTxt.text = plant.PlantName;
-        PriceText.text = "$" + plant.price;
+        PriceText.text = "$" + plant.BuyPrice;
         Icon.sprite = plant.icon;
     }
 

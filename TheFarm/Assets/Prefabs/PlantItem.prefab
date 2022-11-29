@@ -212,6 +212,8 @@ MonoBehaviour:
   NameTxt: {fileID: 27627585609136396}
   PriceText: {fileID: 27627585895973215}
   Icon: {fileID: 27627587336380131}
+  btnImage: {fileID: 27627586218212140}
+  btnText: {fileID: 27627586311703831}
 --- !u!1 &27627586218212143
 GameObject:
   m_ObjectHideFlags: 0

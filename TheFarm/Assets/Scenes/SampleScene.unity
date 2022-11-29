@@ -704,6 +704,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectPlant: {fileID: 0}
   isPlanting: 0
+  money: 100
+  moneyTxt: {fileID: 973737755}
+  buyColor: {r: 0, g: 1, b: 0, a: 1}
+  cancelColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &486674758
 GameObject:
   m_ObjectHideFlags: 0
