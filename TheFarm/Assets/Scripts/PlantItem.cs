@@ -12,15 +12,27 @@ public class PlantItem : MonoBehaviour
     public Text PriceText;
     public Image Icon;
 
+    FarmManager fm;
+
     void Start()
     {
-        NameTxt.text = plant.PlantName;
-        PriceText.text = "$"+plant.price;
-        Icon.sprite = plant.icon;
+        fm = FindObjectOfType<FarmManager>();
+        InitializeUI();
     }
 
     public void BuyPlant()
     {
         Debug.Log("Bought " + plant.PlantName);
+        fm.SelectPlant(this);
     }
+
+    void InitializeUI()
+    {
+        NameTxt.text = plant.PlantName;
+        PriceText.text = "$" + plant.price;
+        Icon.sprite = plant.icon;
+    }
+
+
+
 }

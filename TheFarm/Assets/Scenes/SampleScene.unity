@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 408363355}
   - component: {fileID: 408363357}
   - component: {fileID: 408363356}
+  - component: {fileID: 408363358}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -689,6 +690,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &408363358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408363354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad7a9fcbe9474b44bd139b9b3ebb359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectPlant: {fileID: 0}
+  isPlanting: 0
 --- !u!1 &486674758
 GameObject:
   m_ObjectHideFlags: 0

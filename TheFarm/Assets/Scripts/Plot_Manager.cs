@@ -12,13 +12,14 @@ public class Plot_Manager : MonoBehaviour
     int plantStage = 0;
     float timer;
 
-    public PlantObject selectedPlant;
+    PlantObject selectedPlant;
+    FarmManager fm;
 
     void Start()
     {
         plant = transform.GetChild(0).GetComponent<SpriteRenderer>();
         plantcollider = transform.GetChild(0).GetComponent<BoxCollider2D>();
-
+        fm = transform.parent.GetComponent<FarmManager>();
     }
 
     void Update()
@@ -47,9 +48,9 @@ public class Plot_Manager : MonoBehaviour
             }
             
         }
-        else
+        else if(fm.isPlanting)
         {
-            Plant();
+            Plant(fm.selectPlant.plant);
         }
     }
 
@@ -59,8 +60,9 @@ public class Plot_Manager : MonoBehaviour
         plant.gameObject.SetActive(false);
     }
 
-    void Plant()
+    void Plant(PlantObject newPlant)
     {
+        selectedPlant = newPlant;
         Debug.Log("Planted");
         isPlanted = true;
         plantStage = 0;
